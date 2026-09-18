@@ -3,46 +3,96 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Solutions Services</title>
+<title>AI Solutions Services | Agra</title>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Arial, sans-serif; }
   body { background:#0f1117; color:#e8e8e8; line-height:1.6; }
-  header { background:#141826; padding:18px 6%; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:10; border-bottom:1px solid #232838; }
+  header { background:#141826; padding:16px 6%; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:10; border-bottom:1px solid #232838; flex-wrap:wrap; }
   header .logo { font-size:1.3rem; font-weight:700; color:#4dd0e1; }
-  nav a { color:#e8e8e8; text-decoration:none; margin-left:22px; font-size:0.95rem; }
+  nav a { color:#e8e8e8; text-decoration:none; margin-left:14px; font-size:0.85rem; }
   nav a:hover { color:#4dd0e1; }
 
-  .hero { text-align:center; padding:80px 6% 60px; }
-  .hero h1 { font-size:2.3rem; margin-bottom:16px; }
+  .hero { text-align:center; padding:70px 6% 50px; }
+  .hero h1 { font-size:2.2rem; margin-bottom:14px; }
   .hero span { color:#4dd0e1; }
-  .hero p { max-width:600px; margin:0 auto 28px; color:#b8b8c0; font-size:1.05rem; }
-  .btn { display:inline-block; background:#4dd0e1; color:#0f1117; padding:14px 32px; border-radius:30px; text-decoration:none; font-weight:700; margin:6px; }
+  .hero p { max-width:600px; margin:0 auto 12px; color:#b8b8c0; font-size:1.02rem; }
+  .location-tag { display:inline-block; background:#4dd0e122; color:#4dd0e1; padding:5px 14px; border-radius:20px; font-size:0.85rem; margin-bottom:22px; }
+  .btn { display:inline-block; background:#4dd0e1; color:#0f1117; padding:14px 30px; border-radius:30px; text-decoration:none; font-weight:700; margin:6px; font-size:0.95rem; }
   .btn.outline { background:transparent; border:2px solid #4dd0e1; color:#4dd0e1; }
 
-  section { padding:60px 6%; }
-  h2 { text-align:center; font-size:1.8rem; margin-bottom:36px; }
+  section { padding:55px 6%; }
+  h2 { text-align:center; font-size:1.7rem; margin-bottom:10px; }
+  .section-sub { text-align:center; color:#b8b8c0; font-size:0.92rem; margin-bottom:32px; }
 
-  .services-grid, .why-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
-  .card { background:#141826; border:1px solid #232838; border-radius:12px; padding:26px; }
-  .card h3 { color:#4dd0e1; margin-bottom:10px; font-size:1.1rem; }
-  .card p { color:#b8b8c0; font-size:0.92rem; }
+  .about-box { max-width:750px; margin:0 auto; background:#141826; border:1px solid #232838; border-radius:14px; padding:32px; text-align:center; }
+  .about-box p { color:#c8c8d0; margin-bottom:14px; }
+  .proof-link { display:inline-block; margin-top:10px; color:#4dd0e1; font-size:0.9rem; text-decoration:none; border:1px solid #4dd0e1; padding:8px 18px; border-radius:20px; }
 
-  .pricing-box { max-width:420px; margin:0 auto; background:#141826; border:2px solid #4dd0e1; border-radius:16px; padding:34px; text-align:center; }
-  .pricing-box .price { font-size:2.4rem; color:#4dd0e1; font-weight:800; margin:10px 0; }
-  .pricing-box .price span { font-size:1rem; color:#b8b8c0; font-weight:400; }
-  .pricing-box ul { list-style:none; text-align:left; margin:20px 0; }
-  .pricing-box li { padding:6px 0; color:#d0d0d0; }
-  .pricing-box li::before { content:"✔ "; color:#4dd0e1; }
-  .free-tag { background:#4dd0e133; color:#4dd0e1; display:inline-block; padding:6px 16px; border-radius:20px; font-size:0.85rem; margin-bottom:14px; }
+  .progress-flow { display:flex; flex-wrap:wrap; justify-content:center; gap:16px; max-width:850px; margin:0 auto; }
+  .progress-step { background:#141826; border:1px solid #232838; border-left:3px solid #4dd0e1; border-radius:10px; padding:18px; width:220px; }
+  .progress-step h3 { color:#4dd0e1; font-size:0.95rem; margin-bottom:6px; }
+  .progress-step p { color:#b8b8c0; font-size:0.85rem; }
 
-  .faq-item { border-bottom:1px solid #232838; padding:18px 0; }
+  .services-grid, .why-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:18px; }
+  .card { background:#141826; border:1px solid #232838; border-radius:12px; padding:24px; }
+  .card h3 { color:#4dd0e1; margin-bottom:8px; font-size:1.05rem; }
+  .card p { color:#b8b8c0; font-size:0.9rem; margin-bottom:10px; }
+  .card .tag-price { display:inline-block; background:#4dd0e122; color:#4dd0e1; padding:4px 12px; border-radius:16px; font-size:0.85rem; font-weight:700; }
+
+  .agent-card { max-width:520px; margin:0 auto 40px; background:linear-gradient(145deg,#141826,#1a2035); border:2px solid #4dd0e1; border-radius:16px; padding:30px; text-align:center; }
+  .agent-card .badge { background:#4dd0e1; color:#0f1117; font-size:0.75rem; font-weight:700; padding:4px 12px; border-radius:12px; display:inline-block; margin-bottom:12px; }
+  .agent-card h3 { font-size:1.3rem; margin-bottom:10px; }
+  .agent-card .price { font-size:2rem; color:#4dd0e1; font-weight:800; margin:8px 0; }
+  .agent-card .price span { font-size:0.95rem; color:#b8b8c0; font-weight:400; }
+
+  .demo-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
+  .demo-card { background:#141826; border:1px solid #232838; border-radius:12px; overflow:hidden; }
+  .demo-thumb { height:150px; background:linear-gradient(135deg,#1a2035,#232b45); display:flex; align-items:center; justify-content:center; position:relative; }
+  .demo-card .demo-label { padding:14px; font-size:0.92rem; color:#d0d0d0; }
+  .demo-note { text-align:center; color:#7a7a85; font-size:0.82rem; margin-top:18px; }
+
+  /* Animated AI-solving-problem demo */
+  .ai-demo-box { max-width:600px; margin:0 auto 30px; background:#141826; border:2px solid #4dd0e1; border-radius:16px; padding:30px; text-align:center; overflow:hidden; }
+  .ai-demo-stage { position:relative; height:90px; display:flex; align-items:center; justify-content:center; }
+  .ai-demo-stage .msg { position:absolute; font-size:1rem; font-weight:600; opacity:0; }
+  .ai-demo-stage .m1 { color:#ff8a80; animation: fadeCycle 8s infinite; }
+  .ai-demo-stage .m2 { color:#ffd54f; animation: fadeCycle 8s infinite; animation-delay:2s; }
+  .ai-demo-stage .m3 { color:#4dd0e1; animation: fadeCycle 8s infinite; animation-delay:4s; }
+  .ai-demo-stage .m4 { color:#69f0ae; animation: fadeCycle 8s infinite; animation-delay:6s; }
+  @keyframes fadeCycle {
+    0% { opacity:0; transform:translateY(10px); }
+    5% { opacity:1; transform:translateY(0); }
+    20% { opacity:1; }
+    25% { opacity:0; transform:translateY(-10px); }
+    100% { opacity:0; }
+  }
+  .ai-demo-dots span { width:8px; height:8px; background:#4dd0e1; border-radius:50%; display:inline-block; margin:0 3px; animation: bounce 1.2s infinite; }
+  .ai-demo-dots span:nth-child(2){ animation-delay:0.2s; }
+  .ai-demo-dots span:nth-child(3){ animation-delay:0.4s; }
+  @keyframes bounce { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-6px);} }
+
+  .process-flow { display:flex; flex-wrap:wrap; justify-content:center; gap:14px; }
+  .process-step { background:#141826; border:1px solid #232838; border-radius:12px; padding:18px 16px; width:160px; text-align:center; }
+  .process-step .num { width:30px; height:30px; background:#4dd0e1; color:#0f1117; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; margin:0 auto 10px; }
+  .process-step p { font-size:0.85rem; color:#c8c8d0; }
+
+  .info-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:18px; max-width:900px; margin:0 auto; }
+  .info-card { background:#141826; border:1px solid #232838; border-radius:12px; padding:22px; text-align:center; }
+  .info-card h3 { color:#4dd0e1; font-size:0.95rem; margin-bottom:8px; }
+  .info-card p { color:#b8b8c0; font-size:0.88rem; }
+
+  .faq-item { border-bottom:1px solid #232838; padding:16px 0; max-width:750px; margin:0 auto; }
   .faq-item h3 { font-size:1rem; color:#e8e8e8; margin-bottom:6px; }
-  .faq-item p { color:#b8b8c0; font-size:0.92rem; }
+  .faq-item p { color:#b8b8c0; font-size:0.9rem; }
+  .faq-item a { color:#4dd0e1; }
+
+  .terms-box { max-width:750px; margin:0 auto; background:#141826; border:1px solid #232838; border-radius:14px; padding:28px; }
+  .terms-box p { color:#b8b8c0; font-size:0.9rem; margin-bottom:8px; }
 
   .contact { text-align:center; background:#141826; border-radius:16px; }
-  .contact p { color:#b8b8c0; margin-bottom:20px; }
+  .contact p { color:#b8b8c0; margin-bottom:18px; }
 
-  footer { text-align:center; padding:24px; color:#7a7a85; font-size:0.85rem; border-top:1px solid #232838; }
+  footer { text-align:center; padding:22px; color:#7a7a85; font-size:0.85rem; border-top:1px solid #232838; }
 </style>
 </head>
 <body>
@@ -50,8 +100,10 @@
 <header>
   <div class="logo">AI Solutions Services</div>
   <nav>
+    <a href="#about">About</a>
+    <a href="#progress">Progress</a>
     <a href="#services">Services</a>
-    <a href="#pricing">Pricing</a>
+    <a href="#demo">Demo</a>
     <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -59,35 +111,122 @@
 
 <section class="hero">
   <h1>AI से अपना <span>Time और Money</span> दोनों बचाएं</h1>
-  <p>Coaching institutes, Real Estate agents और Restaurants के लिए — AI-powered videos, voice, images और content जो आपका काम आसान बनाए और ग्राहक बढ़ाए।</p>
+  <p>Coaching institutes, Real Estate agents और Restaurants के लिए — AI-powered videos, voice, images और AI agents जो आपका काम आसान बनाएं और ग्राहक बढ़ाएं।</p>
+  <div class="location-tag">📍 Based in Agra, Uttar Pradesh</div><br>
   <a href="https://wa.me/919760695417" class="btn">WhatsApp पर बात करें</a>
   <a href="#services" class="btn outline">Services देखें</a>
 </section>
 
-<section id="services">
-  <h2>हमारी Services</h2>
-  <div class="services-grid">
-    <div class="card"><h3>AI Video</h3><p>Promotional videos, reels, ads — बिना camera crew के, कम समय में।</p></div>
-    <div class="card"><h3>AI Voice / Audio</h3><p>Voiceovers, announcements, podcast-style audio content।</p></div>
-    <div class="card"><h3>AI Image</h3><p>Posters, banners, social media creatives आपके business के लिए।</p></div>
-    <div class="card"><h3>AI Content</h3><p>Captions, descriptions, messages — जो सही ग्राहक तक पहुंचे।</p></div>
-    <div class="card"><h3>AI Agent Setup</h3><p>WhatsApp/enquiry automation जो आपके ग्राहकों के basic सवालों के जवाब खुद दे।</p></div>
+<section id="about">
+  <h2>About Us</h2>
+  <div class="about-box">
+    <p>AI Solutions Services, Agra से चलने वाली एक applied-AI service है। हम local businesses — coaching institutes, real estate agents और restaurants — के लिए AI-based content और automation तैयार करते हैं, ताकि उनका समय बचे और ग्राहक ज़्यादा जुड़ें।</p>
+    <p>हमारा focus सिर्फ एक चीज़ पर है: आपकी समस्या समझना और उसे AI की मदद से practical तरीके से हल करना — तेज़, trusted और affordable तरीके से।</p>
+    <a href="https://in.linkedin.com/in/prince-gupta-310847427" target="_blank" class="proof-link">🔗 Founder की LinkedIn Profile देखें</a>
   </div>
 </section>
 
-<section id="pricing">
-  <h2>Pricing</h2>
-  <div class="pricing-box">
-    <span class="free-tag">पहला काम बिल्कुल FREE</span>
-    <div class="price">₹1000 <span>/ service</span></div>
-    <p style="color:#b8b8c0">+ ₹150 monthly maintenance</p>
-    <ul>
-      <li>कोई hidden charges नहीं</li>
-      <li>Trusted & Legal तरीके से काम</li>
-      <li>India में based, local support</li>
-      <li>पहला project free — तभी pay करें जब खुश हों</li>
-    </ul>
-    <a href="https://wa.me/919760695417" class="btn">Free काम शुरू करें</a>
+<section id="progress">
+  <h2>Our Progress</h2>
+  <p class="section-sub">हमारी AI journey — सीखने से लेकर काम करने तक</p>
+  <div class="progress-flow">
+    <div class="progress-step"><h3>AI Foundation Training</h3><p>Critical thinking, reasoning, prompting और context building में structured training पूरी की।</p></div>
+    <div class="progress-step"><h3>Skills Built</h3><p>AI image, video, voice, audio और content creation में hands-on practice।</p></div>
+    <div class="progress-step"><h3> Indiasssssss Businesses पर Focus</h3><p>Local coaching institutes, real estate agents और restaurants की ज़रूरतों को समझा।</p></div>
+    <div class="progress-step"><h3>अभी Live</h3><p>Website live है, पहले clients को free में काम करके दिखाने के लिए तैयार।</p></div>
+  </div>
+</section>
+
+<section id="services">
+  <h2>हमारी Services</h2>
+  <p class="section-sub">एक बार का AI Agent setup, या individual services — जो भी आपको चाहिए</p>
+
+  <div class="agent-card">
+    <span class="badge">MOST POPULAR</span>
+    <h3>AI Agent Setup</h3>
+    <p style="color:#b8b8c0; font-size:0.9rem">WhatsApp/enquiry automation जो आपके ग्राहकों के सवालों के जवाब खुद दे</p>
+    <div class="price">₹1000 <span>+ ₹150/month maintenance</span></div>
+    <a href="https://wa.me/919760695417" class="btn">Enquiry करें</a>
+  </div>
+
+  <div class="services-grid">
+    <div class="card"><h3>AI Video</h3><p>Promotional videos, reels, ads।</p><span class="tag-price">₹500</span></div>
+    <div class="card"><h3>AI Voice</h3><p>Voiceovers, announcements।</p><span class="tag-price">₹500</span></div>
+    <div class="card"><h3>AI Audio</h3><p>Podcast-style audio content।</p><span class="tag-price">₹500</span></div>
+    <div class="card"><h3>AI Image</h3><p>Posters, banners, creatives।</p><span class="tag-price">₹500</span></div>
+    <div class="card"><h3>Prompt Engineering</h3><p>Custom AI prompts आपके काम के लिए।</p><span class="tag-price">₹500</span></div>
+    <div class="card"><h3>Content Creation</h3><p>Captions, descriptions, messages।</p><span class="tag-price">₹500</span></div>
+  </div>
+</section>
+
+<section id="demo">
+  <h2>Watch Demo</h2>
+  <p class="section-sub">Live demo — देखिए AI किसी problem को कैसे solve करता है</p>
+
+  <div class="ai-demo-box">
+    <div class="ai-demo-stage">
+      <div class="msg m1">😟 Client Problem: "मेरे coaching center में admissions कम हो रहे हैं"</div>
+      <div class="msg m2">🧠 AI Analysis: audience, offer और messaging को समझ रहा है...</div>
+      <div class="msg m3">⚙️ AI Solution तैयार हो रहा है <span class="ai-demo-dots"><span></span><span></span><span></span></span></div>
+      <div class="msg m4">✅ Solution: Targeted poster + WhatsApp AI agent + admission offer तैयार!</div>
+    </div>
+    <p style="color:#7a7a85; font-size:0.8rem; margin-top:8px">यह एक live animated demo है — असली video file नहीं</p>
+  </div>
+
+  <div class="demo-grid">
+    <div class="demo-card">
+      <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:150px;display:block">
+        <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#4dd0e1"/><stop offset="100%" stop-color="#1a2035"/>
+        </linearGradient></defs>
+        <rect width="300" height="200" fill="url(#g1)"/>
+        <text x="150" y="75" font-size="20" fill="#0f1117" font-weight="800" text-anchor="middle">SHARMA COACHING</text>
+        <text x="150" y="100" font-size="13" fill="#0f1117" text-anchor="middle">Admissions Open — 2026</text>
+        <circle cx="150" cy="135" r="18" fill="#0f1117"/>
+        <text x="150" y="140" font-size="11" fill="#4dd0e1" text-anchor="middle">NEET</text>
+        <text x="150" y="170" font-size="11" fill="#0f1117" text-anchor="middle">Call: 98765 43210</text>
+      </svg>
+      <div class="demo-label">Coaching Institute Poster Sample</div>
+    </div>
+    <div class="demo-card">
+      <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:150px;display:block">
+        <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#ffad47"/><stop offset="100%" stop-color="#1a2035"/>
+        </linearGradient></defs>
+        <rect width="300" height="200" fill="url(#g2)"/>
+        <text x="150" y="70" font-size="19" fill="#0f1117" font-weight="800" text-anchor="middle">SPICE GARDEN</text>
+        <text x="150" y="98" font-size="13" fill="#0f1117" text-anchor="middle">Weekend Family Thali</text>
+        <rect x="105" y="115" width="90" height="26" rx="13" fill="#0f1117"/>
+        <text x="150" y="132" font-size="12" fill="#ffad47" text-anchor="middle">₹199 Only</text>
+        <text x="150" y="170" font-size="11" fill="#0f1117" text-anchor="middle">Order Now</text>
+      </svg>
+      <div class="demo-label">Restaurant Poster Sample</div>
+    </div>
+  </div>
+  <p class="demo-note">असली AI-generated video/voice samples जल्द add होंगे</p>
+</section>
+
+<section id="process">
+  <h2>हमारा Process</h2>
+  <div class="process-flow">
+    <div class="process-step"><div class="num">1</div><p>Problem Identify</p></div>
+    <div class="process-step"><div class="num">2</div><p>Critical Thinking with AI</p></div>
+    <div class="process-step"><div class="num">3</div><p>Reasoning with AI</p></div>
+    <div class="process-step"><div class="num">4</div><p>AI Analysis</p></div>
+    <div class="process-step"><div class="num">5</div><p>Feedback & Doubts</p></div>
+    <div class="process-step"><div class="num">6</div><p>AI Solution तैयार</p></div>
+    <div class="process-step"><div class="num">7</div><p>AI Agent भेजता है Solution</p></div>
+    <div class="process-step"><div class="num">8</div><p>Client UPI से Payment करता है</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Delivery & Support</h2>
+  <div class="info-grid">
+    <div class="info-card"><h3>⏱ Delivery Time</h3><p>24 से 72 घंटे के अंदर</p></div>
+    <div class="info-card"><h3>✏ Revision Policy</h3><p>Paid services में lifetime free revisions (AI Agent service छोड़कर)</p></div>
+    <div class="info-card"><h3>🕐 Support</h3><p>24 घंटे, 7 दिन उपलब्ध</p></div>
+    <div class="info-card"><h3>💳 Payment</h3><p>UPI — किसी भी app से</p></div>
   </div>
 </section>
 
@@ -95,19 +234,47 @@
   <h2>अक्सर पूछे जाने वाले सवाल</h2>
   <div class="faq-item">
     <h3>पहला काम सच में free है?</h3>
-    <p>हां — बिल्कुल free। आप देखिए काम कैसा है, पसंद आए तभी आगे बढ़ें।</p>
+    <p>हां — बिल्कुल free। आप देखिए काम कैसा है, पसंद आए तभी आगे बढ़ें। Free sample/demo में revision शामिल नहीं है।</p>
   </div>
   <div class="faq-item">
-    <h3>₹1000 में क्या मिलता है?</h3>
-    <p>एक पूरी service (जैसे 1 AI video, या posters का सेट, या voice content) — आपकी ज़रूरत के हिसाब से।</p>
+    <h3>AI Agent और individual services में क्या फर्क है?</h3>
+    <p>AI Agent एक बार का automation setup है (₹1000 + ₹150/month) जो लगातार काम करता है। बाकी services (video, voice, image वगैरह) एक बार का ₹500 वाला काम है।</p>
   </div>
   <div class="faq-item">
-    <h3>Monthly maintenance ₹150 किस लिए है?</h3>
-    <p>Content को update रखने, छोटे बदलाव करने और support देने के लिए।</p>
+    <h3>Delivery में कितना समय लगता है?</h3>
+    <p>ज़्यादातर काम 24 से 72 घंटे के अंदर पूरा हो जाता है।</p>
+  </div>
+  <div class="faq-item">
+    <h3>Revision/edit मिलता है क्या?</h3>
+    <p>हां — सभी paid individual services में <strong>lifetime free revisions</strong> शामिल हैं। सिर्फ AI Agent service इसमें शामिल नहीं है (उसमें monthly maintenance अलग से लागू होता है)।</p>
   </div>
   <div class="faq-item">
     <h3>Payment कैसे करना है?</h3>
-    <p>UPI/WhatsApp के ज़रिए — काम पसंद आने के बाद ही payment ली जाती है।</p>
+    <p>UPI के ज़रिए — किसी भी UPI app (GPay, PhonePe, Paytm आदि) से payment ली जाती है, काम पसंद आने के बाद ही।</p>
+  </div>
+  <div class="faq-item">
+    <h3>क्या काम शुरू करने से पहले sample देख सकते हैं?</h3>
+    <p>हां — ऊपर Demo section में design samples और live AI demo देख सकते हैं, और अपनी ज़रूरत के हिसाब से custom sample भी माँग सकते हैं।</p>
+  </div>
+  <div class="faq-item">
+    <h3>कौन सी services मिलती हैं?</h3>
+    <p>AI Video, AI Voice, AI Audio, AI Image, Prompt Engineering, Content Creation (₹500 each), और AI Agent automation setup (₹1000 + ₹150/month)।</p>
+  </div>
+  <div class="faq-item">
+    <h3>इस business के पीछे कौन है, कैसे trust करें?</h3>
+    <p>AI Solutions Services को Prince Gupta चलाते हैं, Agra से — जिन्होंने structured AI foundation training ली है। Verification के लिए <a href="https://in.linkedin.com/in/prince-gupta-310847427" target="_blank">LinkedIn profile</a> देख सकते हैं।</p>
+  </div>
+</section>
+
+<section>
+  <h2>Terms & Conditions</h2>
+  <div class="terms-box">
+    <p>1. आपका सारा data (business details, content, files) पूरी तरह safe रखा जाता है और किसी trusted third-party के साथ share नहीं किया जाता।</p>
+    <p>2. Payment हमेशा UPI (किसी भी app) के ज़रिए, काम पूरा होने और आपकी पसंद आने के बाद ही ली जाती है।</p>
+    <p>3. पहला काम free है (बिना revision) — उसके बाद ही service चार्ज लागू होता है।</p>
+    <p>4. Delivery time 24–72 घंटे का estimate है, actual समय काम की complexity पर निर्भर कर सकता है।</p>
+    <p>5. Paid individual services में lifetime free revisions शामिल हैं, AI Agent service को छोड़कर।</p>
+    <p>6. Monthly maintenance (₹150) सिर्फ AI Agent service के लिए लागू है।</p>
   </div>
 </section>
 
@@ -116,7 +283,7 @@
     <h2>Contact करें</h2>
     <p>अपना business बताइए, हम free में पहला sample बनाकर दिखाएंगे।</p>
     <a href="https://wa.me/919760695417" class="btn">WhatsApp: 97606 95417</a>
-    <p style="margin-top:16px">Email: prince.5.19.2005@gmail.com</p>
+    <p style="margin-top:16px">Email: prince.5.19.2005@gmail.com | Agra, Uttar Pradesh</p>
   </div>
 </section>
 
